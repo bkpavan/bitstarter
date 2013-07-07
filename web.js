@@ -14,5 +14,6 @@ app.listen(port, function() {
 
 var fs = require('fs');
 var fromFile = function(fileName) {
-  return fs.readFileSync(fileName);
+  var buffer = new Buffer(fs.readFileSync(fileName), "utf-8");
+  return buffer.toString('utf-8');
 }
