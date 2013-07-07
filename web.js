@@ -3,7 +3,7 @@ var express = require('express');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  response.header('Content-Type', 'text/html);'
+  response.header('Content-Type', 'text/html');
   response.send(fromFile('index.html'));
 });
 
